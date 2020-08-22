@@ -1,6 +1,7 @@
 # Sorting Visualization
 
 This is a ReactJS application designed to visualize various sorting algorithms on a randomly-generated set of integers.
+You can take a look at it here: https://sortvisualization.herokuapp.com/.
 
 ### Brute Force Algorithms
 

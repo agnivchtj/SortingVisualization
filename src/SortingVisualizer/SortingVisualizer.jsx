@@ -99,27 +99,27 @@ export class SortingVisualizer extends React.Component {
         + BACKGROUND_COLOR + " 0%)";
       
       if (slider_val > 90 && slider_val <= 100) {
-        SPEED = 1.7 - (slider_val - 91) * (0.7 / 9);
+        SPEED = 1.3 - (slider_val - 91) * (0.3 / 9);
       }
 
       if (slider_val > 70 && slider_val <= 90) {
-        SPEED = 3 - (slider_val - 71) * (1 / 19);
+        SPEED = 1.8 - (slider_val - 71) * (0.5 / 19);
       }
       
       if (slider_val > 50 && slider_val <= 70) {
-        SPEED = 5.1 - (slider_val - 51) * (1.6 / 19);
+        SPEED = 2.3 - (slider_val - 51) * (0.5 / 19);
       }
 
-      if (slider_val > 30 && slider_val < 50) {
-        SPEED = 6 + (49 - slider_val) * (39 / 18);
+      if (slider_val > 30 && slider_val <= 50) {
+        SPEED = 2.8 - (slider_val - 31) * (0.5 / 19);
       }
 
       if (slider_val > 10 && slider_val <= 30) {
-        SPEED = 50 + (30 - slider_val) * (22 / 19);
+        SPEED = 3.3 - (slider_val - 11) * (0.5 / 19);
       }
       
       if (slider_val <= 10) {
-        SPEED = 100 - (2 * slider_val);
+        SPEED = 4.2 - (slider_val - 1) * (0.1 / 9);
       }
 
     }

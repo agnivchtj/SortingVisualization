@@ -14,7 +14,6 @@ const SIZE_OF_ARRAY = 210;
 const LOWER_BOUND_DATA = 5;
 const UPPER_BOUND_DATA = 460;
 
-
 export class SortingVisualizer extends React.Component {
   constructor(props) {
     super(props);
@@ -359,22 +358,23 @@ export class SortingVisualizer extends React.Component {
     const {array} = this.state;
 
     return (
-      <div className="array-container">
-        {
-          array.map((value, idx) => (
-            <div
-                className="array-bar"
-                key={idx}
-                id="bar"
-                style={{height: `${value}px`}}>
-            </div>
-          ))
-        }
-        <br></br>
+      <div className="container">
+        <div className="array-container">
+          {
+            array.map((value, idx) => (
+              <div
+                  className="array-bar"
+                  key={idx}
+                  id="bar"
+                  style={{height: `${value}px`}}>
+              </div>
+            ))
+          }
+        </div>
 
-        <div className="toolbar">
-          <input className="slider" type="range" id="range" min="1" max="100" onChange={() => this.changeSpeed()}/>
-          
+        <input className="slider" type="range" id="range" min="1" max="100" onChange={() => this.changeSpeed()}/>
+
+        <div className="button-container">
           <button className="button button--generate" id="button--generate" onClick={() => this.resetArray()}>
             Generate!
           </button>
@@ -400,11 +400,8 @@ export class SortingVisualizer extends React.Component {
               Quick Sort
             </button>
           </div>
-
         </div>
       </div>
     );
   }
 }
-
-
